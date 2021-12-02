@@ -1,0 +1,25 @@
+#include <stdio.h>
+int hcf(int a,int b){
+  int i;
+  while(b > 0)
+  {i = a % b;
+  a = b;
+  b = i;}
+  return a;}
+int lcd(int a,int b){
+  int i,c,d;
+  c = b;
+  d =a;
+   while(b > 0)
+  {i = a % b;
+  a = b;
+  b = i;}
+  i = d*c/a;
+return i;}
+
+int main() {
+// your code
+  int a,b;
+  scanf("%d %d",&a,&b);
+  printf("hcf=%d\nlcd=%d\n",hcf(a,b),lcd(a,b));
+}
