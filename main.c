@@ -18,3 +18,17 @@ int main()
     printf("%.2f\n",sqr(b,a));
     return 0;
 }
+/*#include  "stdio.h"
+double f(int n,double x){
+    if (n==0)
+        return 1;
+    else
+        return x*f(n-1,x);
+}
+int main()
+{	int n;
+    double x;
+    scanf("%d%lf",&n,&x);
+    printf("%.2lf",f(n,x));
+    return 0;
+}*/
