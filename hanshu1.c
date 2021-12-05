@@ -10,9 +10,9 @@ double avernum(double a[], int n) {
     int x ;
     for (x = 0; x < n; x++) 
         if (a[x] > aver)
-            m=m+1;
+            m=m+1;//m为大于平均值的个数
     
-    a[100] = m;
+    a[100] = m;//返回第二个值
     return aver;
 }
 int main() {
