@@ -1,34 +1,22 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <math.h>
-double sqr(int x, int n) {
-    int i,s=1;
-    for (i = n; i >0; i--) {
-        if (n != 1)
-            s *= x;
+#include <string.h>
+
+int main() {
+    char a[100];
+    scanf("%s", a);
+    int i, j;
+    char* p;
+    i = strlen(a) - 1;
+    j = strlen(a) / 2;
+    for (p = a; p < a + j; p++, i--) {
+        if (*p != a[i]) {
+            printf("no");
+            break;
+        }
+        else if (p == a + j - 1)
+            printf("yes");
         else
-            return 1;
+            continue;
     }
-    return s;
 }
-int main()
-{
-    int a, b;
-    scanf("%d %d", &a, &b);
-    printf("%.2f\n",sqr(b,a));
-    return 0;
-}
-/*#include  "stdio.h"
-double f(int n,double x){
-    if (n==0)
-        return 1;
-    else
-        return x*f(n-1,x);
-}
-int main()
-{	int n;
-    double x;
-    scanf("%d%lf",&n,&x);
-    printf("%.2lf",f(n,x));
-    return 0;
-}*/
